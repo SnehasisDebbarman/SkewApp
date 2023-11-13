@@ -20,10 +20,11 @@ export default function DetailsScreen() {
         width: "100%",
         height: "100%",
         alignItems: "center",
+        paddingTop: 100,
       }}
       colors={["rgba(0,0,0,0.9)", "rgba(0,0,0,1)"]}
     >
-      <View style={{ flex: 1, alignItems: "center" }}>
+      <View>
         {/* <Canvas style={{ width, height }}>
           <Circle cx={r} cy={r} r={r}>
             <LinearGradient
@@ -43,14 +44,50 @@ export default function DetailsScreen() {
         </Canvas> */}
         <LottieView
           style={{
-            top: 150,
+            left: 0,
+            position: "absolute",
+            top: -60,
             width: 400,
-            height: 400,
+            height: 500,
           }}
-          source={require("../assets/ghost1.json")}
+          source={require("../assets/diwali5.json")}
           autoPlay
           loop
         />
+        <LottieView
+          style={{
+            top: 50,
+            width: 400,
+            height: 500,
+          }}
+          source={require("../assets/diwali1.json")}
+          autoPlay
+          loop
+        />
+        <LottieView
+          style={{
+            position: "absolute",
+            top: 50,
+            width: 300,
+            height: 500,
+          }}
+          source={require("../assets/diwali4.json")}
+          autoPlay
+          loop
+        />
+        {/* <Text
+          style={{
+            top: 80,
+            width: "auto",
+            alignItems: "center",
+            color: "#D6E1EF",
+            fontSize: 30,
+            fontWeight: 700,
+            textAlign: "center",
+          }}
+        >
+          दिवाली की हार्दिक शुभकामनाएं!!
+        </Text> */}
       </View>
     </LG>
   );

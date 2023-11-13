@@ -5,14 +5,19 @@ import {
   View,
   TouchableOpacity,
   Dimensions,
+  Image,
 } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import Carousel from "react-native-reanimated-carousel";
 import LottieView from "lottie-react-native";
 import Ghost1 from "../assets/ghost1.json";
 import Ghost2 from "../assets/ghost2.json";
+import amex from "../assets/amex.png";
+import diwali1 from "../assets/diwali1.json";
+import diwali2 from "../assets/diwali2.json";
+import diwali3 from "../assets/diwali3.json";
 
-const ghostArray = [Ghost1, Ghost2];
+const ghostArray = [Ghost1, Ghost2, diwali1, diwali2, diwali3];
 
 export default function Home() {
   const width = Dimensions.get("window").width;
@@ -57,67 +62,73 @@ export default function Home() {
                 //   position: "absolute",
                 top: 50,
                 //
-                shadowColor: "rgb(48,53,60)",
-                shadowOffset: {
-                  width: 10,
-                  height: 10,
-                },
-                shadowOpacity: 0.6,
-                shadowRadius: 20,
-                elevation: 22,
-                borderRadius: 20,
+                // shadowColor: "rgb(48,53,60)",
+                // shadowOffset: {
+                //   width: 10,
+                //   height: 10,
+                // },
+                // shadowOpacity: 0.6,
+                // shadowRadius: 20,
+                // elevation: 22,
+                // borderRadius: 20,
               }}
             >
               {/* <Text style={{ color: "white" }}>{props}</Text> */}
-              {/* <LinearGradient
+              <LinearGradient
                 // Background Linear Gradient
                 style={{
                   height: "100%",
                   width: "100%",
                   borderRadius: 20,
                 }}
-                colors={["#00ff87", "#60efff"]}
-              ></LinearGradient> */}
-              <LottieView
-                style={{
-                  top: 150,
-                  width: 400,
-                  height: 400,
-                }}
-                source={ghostArray[props.index]}
-                autoPlay
-                loop
-              />
+                colors={["black", "black"]}
+              >
+                {/* <Image
+                  style={{
+                    width: 150,
+                    height: 80,
+                    objectFit: "contain",
+                    borderRadius: 10,
+                    top: 20,
+                    left: 10,
+                  }}
+                  source={amex}
+                /> */}
+
+                <LottieView
+                  style={{
+                    // top: 100,
+                    width: "100%",
+                    height: 600,
+                  }}
+                  source={ghostArray[props.index]}
+                  autoPlay
+                  loop
+                />
+              </LinearGradient>
             </View>
           )}
         ></Carousel>
         {/* <Text style={{ color: "white" }}>Hello</Text> */}
         <View
           style={{
-            flexDirection: "row",
             width: "100%",
             paddingHorizontal: 40,
-            justifyContent: "space-between",
+            justifyContent: "Center",
+            alignItems: "center",
           }}
         >
-          {/* <Text
+          <Text
             style={{
+              width: "auto",
+              alignItems: "center",
               color: "#D6E1EF",
               fontSize: 30,
               fontWeight: 700,
             }}
           >
-            Balance
+            दिवाली की हार्दिक शुभकामनाएं!!
           </Text>
-          <Text
-            style={{
-              color: "#D6E1EF",
-              fontSize: 26,
-              fontWeight: 700,
-            }}
-          >
-            Rs.10000
-          </Text> */}
         </View>
       </LinearGradient>
     </View>
